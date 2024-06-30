@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  web:
+    image: "sanchit1498/node-app-batch-6"
+    ports:
+      - "8000:8000"
