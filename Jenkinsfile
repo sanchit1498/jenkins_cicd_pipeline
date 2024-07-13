@@ -7,7 +7,7 @@ pipeline{
         
         stage("code"){
             steps{
-                git url:"https://github.com/sanchit1498/cicdnodejsApp" , branch:"master"
+                git url:"https://github.com/sanchit1498/jenkins_cicd_pipeline" , branch:"master"
                 echo "cloned sucess"
             }
         }
