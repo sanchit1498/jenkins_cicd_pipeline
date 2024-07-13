@@ -3,8 +3,13 @@
 ## Overview
 This project focuses on setting up a Jenkins CI/CD pipeline for a Node.js application, emphasizing DevSecOps practices. The pipeline incorporates stages for code quality analysis using SonarQube, security checks with OWASP tools, and Docker image scanning with Trivy. The objective is to automate the deployment process while upholding high standards of code quality and security.
 
+![e43d72fe-ea98-482b-8d9e-8f6b81771ea3](https://github.com/user-attachments/assets/d16e7ad6-e570-40a4-b176-310b4264ab0b)
+
 ## Launch EC2 Instance
 Create an AWS EC2 instance with the necessary permissions. Use `t2.large` as the instance type so that it can support the tools running for this project. Make note of the public IP address.
+
+![601a8008-f99e-4fa9-870c-bb0aee4f7791](https://github.com/user-attachments/assets/76f6c746-e4b0-4e7d-95e4-2715a2ca7770)
+
 
 ## Jenkins Setup
 Install Java:
@@ -63,12 +68,18 @@ Access the SonarQube server via port 9000 and log in with the credentials user: 
 
 + Save the changes.
 
+![5ae10aa7-6613-4eed-a5ce-dae38597487e](https://github.com/user-attachments/assets/31dc1c69-0c0c-4d19-9394-bf21e995b415)
+
+
 ## Activate the SonarQube Scanner plugin:
 
 + Go to Manage Jenkins.
 + Choose Tools.
 + Look for "SonarQube Scanner installations".
 + Save your changes.
+
+  ![472557f0-42bc-4d3c-b6c7-f411bbb0cb21](https://github.com/user-attachments/assets/4adebad1-f533-4257-908a-db4090226579)
+
 
 ## Set up a webhook on the SonarQube Server for Jenkins:
 
@@ -77,12 +88,8 @@ Access the SonarQube server via port 9000 and log in with the credentials user: 
 + Locate the Webhooks section.
 + Click on Create to initiate the webhook setup process.
 
-# Set up a webhook on the SonarQube Server for Jenkins:
+![8445721e-58d6-4877-a959-aaf593e1c4da](https://github.com/user-attachments/assets/d1423360-fceb-416d-8cb3-3cce22df9e59)
 
-+ Navigate to Administration.
-+ Select Configuration.
-+ Locate the Webhooks section.
-+ Click on Create to initiate the webhook setup process.
 
 ## Installing Trivy
 
@@ -101,6 +108,9 @@ Install OWASP dependency checker:
 
 + Add the OWASP dependency checker plugin: Manage Jenkins > Plugins > Available Plugins > search for "OWASP dependency checker" > install.
 + Enable OWASP: Manage Jenkins > Tools > find "Dependency-Check installations" > save your changes.
+
+  ![8445721e-58d6-4877-a959-aaf593e1c4da](https://github.com/user-attachments/assets/d1423360-fceb-416d-8cb3-3cce22df9e59)
+
 
 ## Jenkins Pipeline Setup
 
@@ -177,3 +187,10 @@ pipeline{
 }
 ```
 Now We Are Ready for Build
+![7577d9cc-0979-4427-a41b-360a3318caa9](https://github.com/user-attachments/assets/c97e0f8e-6289-4183-a935-065e6d571217)
+
+
+<img width="1512" alt="9d471f23-30bb-4b6c-89f8-4e4e3bc8cda9" src="https://github.com/user-attachments/assets/c4a42888-a63e-4b43-b112-dd409967e993">
+
+
+
